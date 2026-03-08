@@ -1,0 +1,41 @@
+body { font-family: 'Inter', sans-serif; }
+.skill-card {
+    @apply p-8 bg-white dark:bg-gray-800/50 border dark:border-gray-700 rounded-3xl hover:border-primary transition duration-300 flex flex-col items-center justify-center;
+}
+.project-card {
+    @apply bg-white dark:bg-gray-800 rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-transparent hover:border-primary/40 transition-all duration-500 hover:-translate-y-2;
+}
+.service-card {
+    @apply p-8 bg-white dark:bg-gray-900/50 rounded-[2.5rem] border dark:border-gray-800 hover:shadow-2xl transition-all hover:bg-white dark:hover:bg-gray-800;
+}
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.hero-bg-slide {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+}
+    .slideshow-item {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 1.5s ease-in-out;
+        z-index: 1; /* Shob chobi base level-e */
+    }
+    /* Akti chobi jate upore thake */
+    .slideshow-active {
+        opacity: 1 !important;
+        z-index: 2;
+    }
+    /* Mobile menu active state */
+.mobile-menu-active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white; /* dark:bg-gray-900 */
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
